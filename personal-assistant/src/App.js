@@ -1,9 +1,24 @@
-import React from 'react'
 
-const App = () => (
-  <div>
-    Beep boop hi there, I&apos;m your personal assistant hehe
-  </div>
-)
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { Route } from 'react-router-dom';
+import Weather from 'containers/Weather.js';
+import TodoList from 'components/TodoList.js';
 
-export default App
+
+function App() {
+  <BrowserRouter>
+  <Switch>
+    <Route path="/todos">
+      <TodoList />
+    </Route>
+  </Switch>
+  <Switch>
+    <Route path="/weather">
+      <Weather />
+    </Route>
+  </Switch>
+</BrowserRouter>
+}
+
+export default App;
